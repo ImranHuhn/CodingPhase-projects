@@ -1,0 +1,266 @@
+.home {
+
+    .info-section {
+        padding: 54px;
+        width: 35%;
+    }
+
+    .content-area {
+        margin-left: 35%;
+        width: 65%;
+        background: $color3;
+        height: 100%;
+        // padding: 0 0 0 25%;
+        .img-container {
+            display: inline-block;
+            width: 30%;
+            position: relative;
+            height: 100%;
+            .user-img {
+                position: absolute;
+                top: 56px;
+                left: -190px;
+                width: 450px;
+                height: calc(100% - 112px);
+                background: url(../img/IMG_1578.JPG) no-repeat 65% center; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                -webkit-box-shadow: 10px 20px 80px 20px rgba(0,0,0,0.35);
+                -moz-box-shadow: 10px 20px 80px 20px rgba(0,0,0,0.35);
+                box-shadow: 10px 20px 80px 20px rgba(0,0,0,0.35);
+            }
+        }
+
+        .profile-section {
+            vertical-align: top;
+            display: inline-block;
+            padding: 20% 0 0;
+            max-width: 500px;
+
+            .profile {
+                h1 {
+                    font-size: 2.3rem;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    margin: 0 0 1rem;
+                    span {
+                        color: $color1;
+                    }
+                }
+                h5 {
+                    font-size: 1.1rem;
+                    margin: 0 0 2rem;
+                }
+                p {
+                    color: $color5;
+                    font-weight: 300;
+                    line-height: 1.4;
+                    margin: 0 0 2rem;
+                }
+            }
+        }
+    }
+}
+
+// phone
+@media (max-width: 767px) {
+    .home {
+
+        .menu-icon {
+            top: -3px;
+            right: 20px;
+            color: white;
+            position: absolute;
+            .fas {
+                color: white;
+            }
+        }
+
+        .content-area {
+
+            height: auto;
+
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        }
+
+        .info-section{
+            // display: none;
+            padding: 10px 20px;
+            position: static;
+            
+            .logo{
+                height: 50px;
+                width: 70px;
+                font-size: 1rem;
+            }
+            .info-box{
+                display: none;
+            }
+        }
+
+        // .info-section {
+        //     width: 30%;
+        //     padding: 56px 30px;
+
+        //     .icon-section {
+
+        //         a{
+        //             font-size: 1.4rem;
+        //         }
+        //     }
+        // }
+
+        .content-area {
+            margin-left: 0;
+            width: 100%;
+
+            .img-container {
+                padding: 56px 20px 0;
+
+                .user-img{
+                    position: static;
+                    width: 100%;
+                    background-position-x: 77%;
+                }
+            }
+
+            .profile-section {
+                width: 70%;
+                float: right;
+                padding: 20% 20px 0;
+
+                .primary-btn, .ghost-btn {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .home {
+
+        .info-section {
+            padding: 30%;
+            padding: 56px 30px;
+
+            .icon-section {
+
+                a{
+                    font-size: 1.4rem;
+                }
+            } 
+        }
+
+        .content-area {
+            margin-left: 30%;
+            width: 70%;
+
+            .img-container {
+                padding: 56px 20px 0;
+
+                .user-img{
+                    position: static;
+                    width: 100%;
+                    background-position-x: 77%;
+                }
+            }
+
+            .profile-section {
+                width: 70%;
+                float: right;
+                padding: 20% 20px 0;
+            }
+        }
+    }
+}
+
+// laptop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .home {
+
+        .info-section {
+
+            .info-box {
+                padding: 40px;
+                .icon-section {
+
+                    a{
+                        // font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        .content-area {
+
+            .img-container {
+                padding: 56px 20px 0;
+                float: left;
+
+                .user-img{
+                    position: static;
+                    width: 100%;
+                    background-position-x: 77%;
+                }
+            }
+
+            .profile-section {
+                width: 70%;
+                float: left;
+                padding: 20% 20px 0;
+                max-width: 800px;
+            }
+        }
+    }
+}
+
+// extra large
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .home {
+
+        .info-section {
+            width: 20%;
+            padding: 56px 30px;
+
+            .icon-section {
+
+                a{
+                    font-size: 1.4rem;
+                }
+            } 
+        }
+
+        .content-area {
+            width: 80%;
+            margin-left: 20%;
+
+            .img-container {
+                padding: 56px 20px 0;
+                float: left;
+
+                .user-img{
+                    position: static;
+                    width: 100%;
+                }
+            }
+
+            .profile-section {
+                width: 70%;
+                float: left;
+                padding: 20% 60px 0;
+                max-width: 800px;
+                // padding: 20% 20px 0;
+            }
+        }
+    }
+}
