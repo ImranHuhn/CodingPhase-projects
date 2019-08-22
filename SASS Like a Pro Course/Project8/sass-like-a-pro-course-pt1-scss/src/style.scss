@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Roboto&display=swap');
+
+$mainFont: 'Indie Flower', sans-serif;
+$secFont: 'Roboto', cursive;
+$liPadding: 10px 15px;
+$liDisplay: inline-block;
+$marginNum: 70;
+//when declaring a variable, you must use "$". after the "$" you give the variable a name. you can use variable for anything!
+
+*{
+  box-sizing: border-box;
+}
+
+.header{
+  background: red;
+  ul{
+    padding: 0;
+    margin: 0;
+    li{
+      font-family: $mainFont;
+      display: $liDisplay;
+      padding: $liPadding;
+      list-style: none;
+    }
+  }
+}// "li" is nested in "ul", and "ul" is nested in "header" just like in the html section as well. 
+
+.container{
+  width: 50 * 15 + px;
+  margin: 0 auto;
+  &:after{
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+article{
+  width: 1000px / 1200px *100%;
+  display: inline-block;
+  float: left;
+}
+aside{
+  width: 200px / 1200px * 100%;
+  display: inline-block;
+  padding: 20px / 1200px * 100%;  //operators ar basically math operators: add, sub, div, multi, mod.
+  img{
+    width: 175%;
+  }
+}
+
+.submenu{     
+  &.blue{
+    background: blue;
+  }//by using "&" you target the statement that has "submenu" and "blue". this only work if "&" is nested. 
+  &.nav li{
+    font-family: $mainFont;
+    list-style: none;
+    padding: $liPadding;
+    display: $liDisplay;
+    margin-bottom: $marginNum + px;
+  }//if "&" is stacked, then it does not inclued the other nested "&". for instance in the second child with "&.nav li" it does not include "&.blue" bc it is stacked. "&.nav li" is in combination with the parent which is "submenu". so this target a class with "submenu", and "nav" with "li" nested in it.
+  &.sky ul{
+    padding: 0;
+  }
+  
+  &:hover{
+    background: yellow;
+  }//hover goes into effect when the mouse is hovered over the "submenu"
+}
+
+.btn{
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.primary{
+  @extend .btn;
+  background: blue; 
+}
+.success{
+  @extend .btn;
+  background: green;  
+}
+.danger{
+  @extend .btn;
+  background: red;  
+}
+.warning{
+  @extend .btn;
+  background: yellow;
+}//when an element uses the property "@extend" with a specific class, that element will inheret all the properies that class has. 

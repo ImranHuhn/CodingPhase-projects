@@ -1,0 +1,11 @@
+.header {
+  background: black;
+  padding: 20px;
+}
+.header ul {
+  background: yellow;
+  padding: 20px;
+}
+.header ul li {
+  list-style: none;
+}

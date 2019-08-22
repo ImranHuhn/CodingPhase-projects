@@ -1,0 +1,37 @@
+
+// @=function | $ = variable
+@mixin createArrow($size, $side) { 
+  @if $side == 'up' {
+    width: 0; 
+    height: 0; 
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid black; 
+  } 
+  @else if $side == 'down' {
+    width: 0; 
+    height: 0; 
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid #f00;
+  }
+  @else if $side == 'left' {
+    width: 0; 
+    height: 0; 
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent; 
+    border-right:$size solid blue; 
+  }
+  @else if $side == 'right' {
+    width: 0; 
+    height: 0; 
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid green;
+  }
+}
+
+.arrow1 { @include createArrow(100px, 'up'); }
+.arrow2 { @include createArrow(100px, 'down'); }
+.arrow3 { @include createArrow(100px, 'right'); }
+.arrow4 { @include createArrow(100px, 'left'); }
