@@ -1,0 +1,22 @@
+what I did:
+-followed the video a lot more closely. add and edit the code while joe was doing. i didnt wait nor did i do it myself. 
+
+lessons:
+-every html&css proj starts of with the same. create a directory; create index.html and main.css file; html boiler plate; css reset in the head section and reset.css file; cdn for icons in the head section; link css file in the head section, all in this order.
+-to avoid getting lost or mixed up from the closing tags is to click on the opening tag, and its contemporary--the closing tag-- should automatically be highlighted. this helps keeps track and helps organize the closing tag.
+-common practice is that position: relative; is parent and position: absolute; is child
+-common practice that you reset the float in the parent ":after" and in the child you can use float.
+-buttons are just anchor links
+-not allowed to to have an id or class that starts with a number.
+-#color-collection .right-side .info-area h2 span .orange{}  /* with space between span and .orange = element with the child that has class ".orange"; targeting the .orange statement */
+#color-collection .right-side .info-area h2 span.orange{}  /* without space between span and .orange = targeting the statement that has both "span" and ".orange" */
+
+
+
+
+
+
+
+
+
+
