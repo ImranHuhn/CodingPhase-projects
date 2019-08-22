@@ -1,0 +1,5 @@
+-difference between transitions and animations are: transitions = mouse hovers over elements then changes happen | and animations = changes happen automatically when the webpage is loaded.
+-commonly used for animations : "animation-fill-mode: none;" (default) | "animation-fill-mode: forwards;" | "animation-fill-mode: both;" | "animation-timing-function: ease-in-out;" | "animation-timing-function: linear;" 
+-use transition shorthand and animation shorthand.
+-"animation-play-state: running;" is not needed in the shorthand because it is running as default. so leave it out. 
+-use "cubic-bezier" to customize the animation-timing-function

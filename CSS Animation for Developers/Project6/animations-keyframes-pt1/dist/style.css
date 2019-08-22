@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes moveRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(500px, 0, 0);
+            transform: translate3d(500px, 0, 0);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(500px, 0, 0);
+            transform: translate3d(500px, 0, 0);
+  }
+}
+.parent {
+  text-align: center;
+  padding: 15px;
+}
+
+.button {
+  border-radius: 3px;
+  background: red;
+  color: white;
+  display: inline-block;
+  padding: 15px 20px;
+}
+
+.box {
+  background: black;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: moveRight .7s ease-in-out 6 alternate forwards running;
+          animation: moveRight .7s ease-in-out 6 alternate forwards running;
+}

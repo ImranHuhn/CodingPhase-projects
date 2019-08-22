@@ -1,0 +1,71 @@
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+}
+.menu li {
+  display: inline-block;
+  list-style: none;
+  padding: 20px;
+  border: 1px solid black;
+  margin: 0;
+  position: relative;
+  transition: all .4s ease-in-out;
+}
+.menu li:hover > ul.first {
+  visibility: visible;
+  opacity: 1;
+}
+.menu li ul.first {
+  background: red;
+  left: -100px;
+  top: 56px;
+  position: absolute;
+  visibility: hidden;
+  width: 200px;
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+.menu li ul.first li {
+  display: block;
+}
+.menu li ul.first li:hover > ul.second {
+  visibility: visible;
+  opacity: 1;
+}
+.menu li ul.second {
+  background: purple;
+  left: 100%;
+  top: -1px;
+  position: absolute;
+  visibility: hidden;
+  width: 200px;
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+.menu li ul.second li {
+  display: block;
+}
+.menu li ul.second li:hover > ul.third {
+  visibility: visible;
+  opacity: 1;
+}
+.menu li ul.third {
+  background: green;
+  left: 100%;
+  top: -1px;
+  position: absolute;
+  visibility: hidden;
+  width: 200px;
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+.menu li ul.third li {
+  display: block;
+}
