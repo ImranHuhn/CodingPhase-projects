@@ -101,7 +101,7 @@ body .main-container .btn-section {
     margin-top: 140px;
 }
 body .main-container .btn-section button {
-    width: 40%
+    width: 400px;
 }
 
 @media (max-width: 1200px) {
@@ -113,6 +113,13 @@ body .main-container .btn-section button {
     }
     body .main-container .selection-section .row .content-box .info p {
         font-size: .8rem;
+    }
+    body .main-container .btn-section {
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
+    body .main-container .btn-section button {
+        width: 400px;
     }
 }
 @media (max-width: 900px) {
@@ -129,6 +136,13 @@ body .main-container .btn-section button {
     body .main-container .selection-section .row .content-box .info p {
         font-size: .6rem;
     }
+    body .main-container .btn-section {
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
+    body .main-container .btn-section button {
+        width: 400px;
+    }
 }
 @media (max-width: 575px) {
     body .main-container .selection-section .row .content-box img {
@@ -142,5 +156,14 @@ body .main-container .btn-section button {
     }
     body .main-container .selection-section .row .content-box {
         margin-bottom: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    body .main-container .btn-section {
+        margin: 50px auto 100px auto;
+    }
+    body .main-container .btn-section button {
+        width: 75%;
     }
 }
