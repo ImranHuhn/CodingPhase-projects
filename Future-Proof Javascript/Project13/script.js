@@ -8,3 +8,15 @@ var notify = document.querySelector('.notify');
 var dvds = document.querySelectorAll('.dvd');
 var itemsTotal = document.querySelector('.items-total');
 var saveBtn = document.querySelector('.btn');
+
+var dvdsSelected = [];
+var i = 0;
+
+while(i < dvds.length) {
+    dvds[i].onclick = function(e) {
+        var dvdsTitle = this.querySelector('.title').textContent
+        console.log(dvdsTitle)
+    }
+    console.log(i);
+    i++;
+}

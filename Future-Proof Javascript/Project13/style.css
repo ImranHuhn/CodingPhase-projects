@@ -80,6 +80,9 @@ body .main-container .selection-section .row .content-box:hover .info {
     background-color: #ff6666;
     transform: scale3d(1.1 , 1.1 , 1.1)
 }
+body .main-container .selection-section .row .content-box .info .title {
+    display: none;
+}
 body .main-container .selection-section .row .content-box .info h3 {
     text-align: center;
     color: #1b1b1b;
