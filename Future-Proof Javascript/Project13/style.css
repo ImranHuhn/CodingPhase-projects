@@ -1,6 +1,49 @@
 body {
     background: #1b1b1b;
 }
+body .notifications .notify {
+    display: none;
+}
+body .notifications .active {
+    display: block !important;
+    width: 300px;
+    position: absolute;
+    background: lightgray;
+    right: 0;
+    top: 0;
+    border-radius: 5px;
+    padding: 10px 10px 5px 20px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+body .notifications .active .circle {
+    float: left;
+}
+body .notifications .active .circle i {
+    color: green;
+    font-size: 30px;
+}
+body .notifications .active .info {
+    padding-left: 40px;
+    text-align: center;
+}
+body .notifications .active .info h5 {
+    margin-bottom: 0rem;
+}
+body .notifications .active .info h5 span {
+    color: green;
+}
+body .notifications .active .info .items-total {
+    color: #1b1b1b;
+    font-size: .8rem;
+    margin-bottom: 0rem;
+}
+
+
+
+
+
+
 body .main-container{
     /* background-color:lightgrey; */
     width: 100%;
@@ -59,4 +102,45 @@ body .main-container .btn-section {
 }
 body .main-container .btn-section button {
     width: 40%
+}
+
+@media (max-width: 1200px) {
+    body .main-container .selection-section .row .content-box img {
+        height: 70%;
+    }
+    body .main-container .selection-section .row .content-box .info h3 {
+        font-size: 1.2rem;
+    }
+    body .main-container .selection-section .row .content-box .info p {
+        font-size: .8rem;
+    }
+}
+@media (max-width: 900px) {
+    body .main-container .selection-section .row .content-box img {
+        width: 100%;
+        height: 50%;
+        background-color: #f9f9f9;
+        padding: 10px;
+        transition: all .3s ease-in-out;
+    }
+    body .main-container .selection-section .row .content-box .info h3 {
+        font-size: 1rem;
+    }
+    body .main-container .selection-section .row .content-box .info p {
+        font-size: .6rem;
+    }
+}
+@media (max-width: 575px) {
+    body .main-container .selection-section .row .content-box img {
+        height: 100%;
+    }
+    body .main-container .selection-section .row .content-box .info h3 {
+        font-size: 1.5rem;
+    }
+    body .main-container .selection-section .row .content-box .info p {
+        font-size: 1rem;
+    }
+    body .main-container .selection-section .row .content-box {
+        margin-bottom: 100px;
+    }
 }
