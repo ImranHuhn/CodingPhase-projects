@@ -93,7 +93,7 @@ a{
 /* ////////////////////////////////////////////////////////////// */
 #header2{
     height: 448px;
-    background: url(http://www.cashadvance6online.com/data/archive/img/1575636591.jpeg) no-repeat center center;
+    background: url(./images/cast.jpg) no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -137,7 +137,7 @@ a{
 #content{
     background: #fafafa;
     overflow: auto;
-    padding: 52px 0 116px 0;
+    padding: 52px 0 40% 0;
 }
 #content .side-column{
     float: left;
@@ -213,6 +213,7 @@ a{
     -moz-border-radius: 2px;
     border-radius: 2px;
     overflow: auto;
+    width: 100%;
 }
 #content .photo-box .head{
     padding-bottom: 16px;
@@ -244,104 +245,75 @@ a{
     padding-top: 25px;
     padding-right: 18px;
 }
-#content .side-column .photo-box .body div1{
-    width: 33.3%;
+#content .side-column .photo-box .body div {
+    width: 32%;
     height: 112px;
     float: left;
-    background: url(https://www.fodors.com/wp-content/uploads/2016/02/1-Ultimate-New-York-Hero.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin-bottom: 4px;
+    margin-bottom: 1%;
+    margin-left: 1%;
 }
-#content .side-column .photo-box .body div2{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url("https://cdn.vox-cdn.com/thumbor/Q7_74k0zUmVCID7lnfaxKMuSaVU=/0x0:4000x2667/1200x800/filters:focal(1680x1014:2320x1654)/cdn.vox-cdn.com/uploads/chorus_image/image/65027193/shutterstock_788608396.0.jpg") no-repeat center center;
+#content .side-column .photo-box .body .div1 {
+    background: url(./images/1spiceshop4.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-    margin-bottom: 4px;
+    background-size: cover; 
 }
-#content .side-column .photo-box .body div3{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://wp.zillowstatic.com/streeteasy/2/shutterstock_695847865-bcd2e5.jpg) no-repeat center center;
+#content .side-column .photo-box .body .div2{
+    background: url(./images/2spiceshopfront.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .photo-box .body div4{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://www.fodors.com/wp-content/uploads/2019/02/WhatNottodoinNYC__HERO_shutterstock_348384155.jpg) no-repeat center center;
+#content .side-column .photo-box .body .div3{
+    background: url(./images/3trailer2.png) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .photo-box .body div5{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZdYsbp_aLMbXNe8k7-ayKkNcPymlTgyM1aDE-FXpHdqIqhaS4lg) no-repeat center center;
+#content .side-column .photo-box .body .div4{
+    background: url(./images/4nickshome2.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .photo-box .body div6{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url("https://cdn.vox-cdn.com/thumbor/rupebRTF0LdmI-Zi78oItJ3pmRU=/0x0:5792x4000/1200x800/filters:focal(2433x1537:3359x2463)/cdn.vox-cdn.com/uploads/chorus_image/image/62819280/GettyImages_1090666014.0.jpg") no-repeat center center;
+#content .side-column .photo-box .body .div5{
+    background: url(./images/5spiceshop1.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .photo-box .body div7{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(http://www.lonelyplanet.com/travel-blog/tip-article/wordpress_uploads/2017/07/topoftherock_nyc_instagram-610fbf974e3e.jpg) no-repeat center center;
+#content .side-column .photo-box .body .div6{
+    background: url(./images/6trailer3.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .photo-box .body div8{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://static01.nyt.com/images/2019/06/27/realestate/27OTM-NYC-slide-UHE4/27OTM-NYC-slide-UHE4-superJumbo.jpg?quality=75&auto=webp&disable=upscale) no-repeat center center;
+#content .side-column .photo-box .body .div7{
+    background: url(./images/7spiceshop2.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .photo-box .body div9{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://d.newsweek.com/en/full/1507075/new-york-city-earthquakes.jpg) no-repeat center center;
+#content .side-column .photo-box .body .div8{
+    background: url(./images/8nickshome4.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
+}
+#content .side-column .photo-box .body .div9{
+    background: url(./images/9monroeshome.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 /* //////////////////////////////////////////////////////////////////////// */
 #content .friend-box{
@@ -360,104 +332,75 @@ a{
 #content .friend-box .head{
     padding-bottom: 16px;
 }
-#content .side-column .friend-box .body div1{
-    width: 33.3%;
+#content .side-column .friend-box .body div {
+    width: 32%;
     height: 112px;
     float: left;
-    background: url(http://images6.fanpop.com/image/photos/37800000/Nick-Burkhardt-Season-4-Cast-Photo-grimm-37836754-1499-2000.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin-bottom: 4px;
+    margin-bottom: 1%;
+    margin-left: 1%;
 }
-#content .side-column .friend-box .body div2{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://i.pinimg.com/originals/25/e5/5e/25e55e66731dba1c164ceff97b7a6cf7.jpg) no-repeat center center;
+#content .side-column .friend-box .body .div1{
+    background: url(./images/jul-eve.jpg) no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .friend-box .body div3{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(http://images6.fanpop.com/image/photos/37800000/Hank-Griffin-Season-4-Cast-Photo-grimm-37836761-1499-2000.jpg) no-repeat center center;
+#content .side-column .friend-box .body .div2{
+    background: url(./images/2014_1008_NBCUXD_Grimm_Hank_1230x1230_AC.jpg) no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .friend-box .body div4{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(http://images6.fanpop.com/image/photos/37800000/Sergeant-Drew-Wu-Season-4-Cast-Photo-grimm-37836768-2000-1499.jpg) no-repeat center center;
+#content .side-column .friend-box .body .div3{
+    background: url(./images/wu.jpg) no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .friend-box .body div5{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://i.pinimg.com/originals/cf/69/5b/cf695b127addaebabdfdcfafbb1847bb.jpg) no-repeat center center;
+#content .side-column .friend-box .body .div4{
+    background: url(./images/Monroe-Season-4-Cast-Photo-grimm-37836757-2000-1499.jpg) no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .friend-box .body div6{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://img.nbc.com/sites/nbcunbc/files/files/images/2014/10/10/2014_1008_NBCUXD_Grimm_Rosalee_1230x1230_AC.jpg) no-repeat center center;
+#content .side-column .friend-box .body .div5{
+    background: url(./images/rosalee.webp) no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .friend-box .body div7{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(http://images6.fanpop.com/image/photos/37800000/Sean-Renard-Season-4-Cast-Photo-grimm-37836772-1499-2000.jpg) no-repeat center center;
+#content .side-column .friend-box .body .div6{
+    background: url(./images/NUP_165036_0611.jpg) no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .friend-box .body div8{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://img.nbc.com/sites/nbcunbc/files/files/images/2014/10/10/2014_1008_NBCUXD_Grimm_Adalind_1230x1230_AC.jpg) no-repeat center center;
+#content .side-column .friend-box .body .div7{
+    background: url(./images/adalind.webp) no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
 }
-#content .side-column .friend-box .body div9{
-    width: 33.3%;
-    height: 112px;
-    float: left;
-    background: url(https://vignette.wikia.nocookie.net/vsbattles/images/5/53/510-Trubel.png/revision/latest?cb=20160322004724) no-repeat center center;
+#content .side-column .friend-box .body .div8{
+    background: url(./images/66564d1471a1d86070a8214a2980baa65137c625_hq.jpg) no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-bottom: 4px;
+}
+#content .side-column .friend-box .body .div9{
+    background: url(./images/bud-wurstner.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 #content .fa-user-friends{
     color: #ffffff;
@@ -567,7 +510,7 @@ a{
     color: #9a9a9a;
 }
 #content .main-column .post1 .post-img{
-    background: url(https://cdn-images-1.medium.com/max/1600/1*1-477UoZP6EqhpzSQ1dBcg.png) no-repeat;
+    background: url(./images/grimmgala2016h.jpg) no-repeat;
     display: block;
     position: relative;
     width: 100%;
@@ -597,8 +540,9 @@ a{
 }
 #content .main-column .post1 .comment{
     background-color: #f4f4f4;
-    height: 102px;
-    overflow: auto;
+    height: 70px;
+    overflow: hidden;
+    margin-bottom: 5px;
 }
 #content .main-column .post1 .comment .img img{
     width: 40px;
