@@ -26,11 +26,66 @@
 #blog-section .blog-container .post .post-img{
     height: 100%;
     width: 100%;
+    
+}
+#blog-section .blog-container .post .season1 {
+    background: url('../../img/s1.jpg');
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-color: #f2f3f5 !important;
 }
+#blog-section .blog-container .post .season2 {
+    background: url('../../img/s2.jpg');
+    background-position: center 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-color: #f2f3f5 !important;
+}
+#blog-section .blog-container .post .season3 {
+    background: url('../../img/s3.jpg');
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-color: #f2f3f5 !important;
+}
+#blog-section .blog-container .post .season4 {
+    background: url('../../img/s4.jpg');
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-color: #f2f3f5 !important;
+}
+#blog-section .blog-container .post .season5 {
+    background: url('../../img/s5.jpg');
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-color: #f2f3f5 !important;
+}
+#blog-section .blog-container .post .season6 {
+    background: url('../../img/s6.jpg');
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-color: #f2f3f5 !important;
+}
+#blog-section .blog-container .post .season7 {
+    background: url('../../img/s7(1).jpg');
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-color: #f2f3f5 !important;
+}
+
+
+
+
+
+
+
+
+
 #blog-section .blog-container .post .details{
     background: white;
     padding: 35px;

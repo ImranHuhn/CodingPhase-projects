@@ -87,11 +87,11 @@
     grid-row: 1/2;    
 }
 #portfolio-section .portfolio-container .box.image1 .image{
-    background: url('https://cdn.dribbble.com/users/1579320/screenshots/6839200/shot_music_player.png');
+    background: url('../../img/droneblue.jpg');
     height: 100%;
     width: 100%;
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 #portfolio-section .portfolio-container .box.image2{
@@ -99,7 +99,7 @@
     grid-row: 1/4;    
 }
 #portfolio-section .portfolio-container .box.image2 .image{
-    background: url('https://cdn.dribbble.com/users/1627429/screenshots/6831693/jualin_-_preview.png');
+    background: url('../../img/rifle.jpg');
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -111,7 +111,7 @@
     grid-row: 2/4;    
 }
 #portfolio-section .portfolio-container .box.image3 .image{
-    background: url('https://cdn.dribbble.com/users/1147856/screenshots/6839622/motomoon.png');
+    background: url('../../img/knife.jpg');
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -123,11 +123,11 @@
     grid-row: 2/3;    
 }
 #portfolio-section .portfolio-container .box.image4 .image{
-    background: url('https://cdn.dribbble.com/users/3562886/screenshots/6831833/cxb-____.png');
+    background: url('../../img/cam.jpg');
     height: 100%;
     width: 100%;
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 #portfolio-section .portfolio-container .box.image5{
@@ -135,11 +135,11 @@
     grid-row: 4/6;    
 }
 #portfolio-section .portfolio-container .box.image5 .image{
-    background: url('https://cdn.dribbble.com/users/2285295/screenshots/6837972/new_sound_of_home.png');
+    background: url('../../img/tools.jpg');
     height: 100%;
     width: 100%;
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 #portfolio-section .portfolio-container .box.image6{
@@ -147,7 +147,7 @@
     grid-row: 3/6;    
 }
 #portfolio-section .portfolio-container .box.image6 .image{
-    background: url('https://cdn.dribbble.com/users/112840/screenshots/6832679/dreams_b.png');
+    background: url('../../img/helmet.jpg');
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -159,11 +159,11 @@
     grid-row: 4/6;    
 }
 #portfolio-section .portfolio-container .box.image7 .image{
-    background: url('https://cdn.dribbble.com/users/44274/screenshots/6840018/bpb.png');
+    background: url('../../img/droneyellow.jpg');
     height: 100%;
     width: 100%;
     background-size: cover;
-    background-position: top center;
+    background-position: left center;
     background-repeat: no-repeat;
 }
 
