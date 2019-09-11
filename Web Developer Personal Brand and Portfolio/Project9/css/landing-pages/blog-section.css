@@ -12,7 +12,7 @@
 #blog-section .blog-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 588px 588px;
+    grid-template-rows: 588px 588px 588px;
     grid-gap: 15px;
     overflow: hidden;
 }
@@ -22,6 +22,10 @@
     cursor: pointer;
     height: 100%;
     overflow: hidden;
+}
+#blog-section .blog-container .post7{
+    grid-column: 2/3;
+    grid-row: 3/4;   
 }
 #blog-section .blog-container .post .post-img{
     height: 100%;
@@ -75,24 +79,15 @@
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-color: #f2f3f5 !important;
+    background-color: #f2f3f5 !important; 
 }
-
-
-
-
-
-
-
-
-
 #blog-section .blog-container .post .details{
     background: white;
     padding: 35px;
     position: absolute;
     top: 100%;
     width: 100%;
-    transform: translate3d(0, -200px, 0);
+    transform: translate3d(0, -100px, 0);
     transition: all .4s ease-in-out;
 }
 #blog-section .blog-container .post .details h4{
@@ -112,6 +107,14 @@
     line-height: 1.5;
 }
 #blog-section .blog-container .post .more{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    bottom: -70px;
+    background: white;
+    padding: 35px;
+}
+#blog-section .blog-container .post:hover .more{
     position: absolute;
     z-index: 3;
     width: 100%;

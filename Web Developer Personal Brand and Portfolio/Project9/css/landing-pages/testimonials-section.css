@@ -116,11 +116,12 @@
     width: 100%;
     transform: translate3d(0, 50px, 0);
     opacity: 0;
+    text-align: center;
 }
 #testimonials-section .testimonials-container .test-sides:hover .person-img .hover-bg .name{
     color:white;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition: all .2s ease-in-out .1s;
     display: flex;
     justify-content: center;
@@ -129,6 +130,7 @@
     width: 100%;
     transform: translate3d(0, 0, 0);
     opacity: 1;
+    text-align: center;
 }
 
 /* tablets */
