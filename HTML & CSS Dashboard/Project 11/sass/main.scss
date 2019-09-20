@@ -1,7 +1,235 @@
+////////////////start reset///////////////
+////////////////start reset///////////////
+////////////////start reset///////////////
+////////////////start reset///////////////
+////////////////start reset///////////////
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+//////////////////end reset///////////////
+//////////////////end reset///////////////
+//////////////////end reset///////////////
+//////////////////end reset///////////////
+//////////////////end reset///////////////
+
+////////////////start grid////////////////
+////////////////start grid////////////////
+////////////////start grid////////////////
+////////////////start grid////////////////
+////////////////start grid////////////////
+// Grid System
+$grid-columns: 12;
+$grid-max-width: 1200px; // breakpoint-small
+$breakpoint-small: "only screen and  (min-width: 0px)";
+$breakpoint-medium: "onlu screen and (min-width: 768px)";
+$breakpoint-large: "only screen and (min-width: 1008px)";
+$breakpoint-xl: "only screen and (min-width: 1300px)";
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container:after, .row:after { //must put this if you plan to use a lot of "float" properties
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*='col-'] { //basically targetting all elements with "col-" in the class
+    float: left;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    min-height: 1px;
+    // display: inline-block;
+}
+
+@media #{$breakpoint-small} { 
+    .container {
+        width: 95%;
+        max-width: $grid-max-width;
+    }
+    @for $i from 1 through $grid-columns { //this is a for loop
+        .col-sm-#{$i} { //sm stands for small
+            width: 100% / $grid-columns * $i;
+        }
+    }
+}
+
+@media #{$breakpoint-medium} { 
+    .container {
+        width: 95%;
+        max-width: $grid-max-width;
+    }
+    @for $i from 1 through $grid-columns { //this is a for loop
+        .col-md-#{$i} { //md stands for medium
+            width: 100% / $grid-columns * $i;
+        }
+    }
+}
+
+@media #{$breakpoint-large} { 
+    .container {
+        width: 95%;
+        max-width: $grid-max-width;
+    }
+    @for $i from 1 through $grid-columns { //this is a for loop
+        .col-lg-#{$i} { //lg = large
+            width: 100% / $grid-columns * $i;
+        }
+    }
+}
+
+@media #{$breakpoint-xl} { 
+    .container {
+        width: 95%;
+        max-width: $grid-max-width;
+    }
+    @for $i from 1 through $grid-columns { //this is a for loop
+        .col-xl-#{$i} { //xl= extra large
+            width: 100% / $grid-columns * $i;
+        }
+    }
+}
+//////////////////end grid////////////////
+//////////////////end grid////////////////
+//////////////////end grid////////////////
+//////////////////end grid////////////////
+//////////////////end grid////////////////
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
-@import "reset";
-@import "grid";
-@import "content-area";
 
 $purpleLight: #302D43;
 $purpleDark: #282639;
@@ -10,7 +238,6 @@ $greyLight: #F4F6F9;
 $greyDark: #50767f; 
 $orange: #F48320;
 $purple: #744BCE;
- 
 
 * {
   box-sizing: border-box;
@@ -157,3 +384,133 @@ textarea:focus, input:focus, input:active{
   background: $greyLight;
   outline: none;
 }
+
+////////////////start content area////////
+////////////////start content area////////
+////////////////start content area////////
+////////////////start content area////////
+////////////////start content area////////
+
+#content-area{
+  margin-left: 280px; 
+  padding: 15px;
+  .heading{
+      h1{
+          color: purple;
+          font-size: 1.4rem;
+          font-weight: 400;
+          margin-bottom: 10px;
+      }
+
+      p{
+          color: $greyDark;
+          font-size: 0.8rem;
+          margin-bottom: 10px;
+      }
+  }
+  .cards{
+      overflow: auto;
+      margin-bottom: 30px;
+      .card{
+          background: #fff;
+          border-radius: 5px;
+          padding: 20px;
+          overflow: auto;
+
+          .user-img{
+              background: url(../img/pat_jane2.jpg) no-repeat center center;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+              width: 115px;
+              height: 115px;
+              border-radius: 50%;
+              background-color: lightblue;
+              margin: 0 auto;
+          }
+          .user-name{
+              font-size: 1rem;
+              color: purple;
+              display: block;
+              text-align: center;
+              margin: 10px 0;
+              font-weight: 700; 
+          }
+          .user-title{
+              display: block;
+              font-size: .8rem;
+              text-align: center;
+              margin: 10px 0;
+              color: $greyDark;
+          }
+          .usr-info-l{ 
+              font-size: .8rem;
+              display: inline-block;
+              color: $greyDark;
+          }
+          .usr-info-r{
+              font-size: .8rem;
+              font-weight: 700;
+              color: $greyDark;
+          }
+          h6{
+              font-size: .8rem;
+          }
+          .date{
+              font-size: 1.3rem;
+              display: block;
+              border-left: 5px solid $greenNeon;
+              position: relative;
+              left: -20px;
+              padding: 5px 40px;
+              margin: 20px 0;
+          }
+          .job-type{
+              background: orange;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              font-size: .6rem;
+              color: white;
+              padding-top: 5px;
+              display: inline-block;
+              text-align: center;
+              vertical-align: middle;
+          }
+          .location{
+              font-size: .8rem;
+              font-weight: 300;
+              display: block;
+              margin-bottom: .5rem;
+          }
+          .Position{
+              font-size: .8rem;
+              font-weight: 500;
+              display: block;
+              margin-bottom: .5rem;
+
+          }
+          .time{
+              font-size: .8rem;
+              font-weight: 300;
+              display: block;
+              color: $greyDark;
+              margin-bottom: .5rem;
+          }
+      }
+  }
+}
+.col-md-4 {
+  width: ((4 * 100%) / 12); 
+  padding: 0 15px;
+}
+.col-md-3 {
+  // width: ((3 * 100%) / 12);
+  padding: 0 15px;
+}
+//////////////////end content area////////
+//////////////////end content area////////
+//////////////////end content area////////
+//////////////////end content area////////
+//////////////////end content area////////
