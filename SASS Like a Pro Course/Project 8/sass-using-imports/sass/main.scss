@@ -1,0 +1,13 @@
+@import "reset";
+
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+@import "variables";//variable has to be first before html and css so the browser knows what the variables are
+$headerBG: orange; //BG stands for background
+$bodyBG: black;
+$fontColor: white; 
+
+@import "header";//notice that the underscore "_" is not included, that's because sass/scss knows that these files are import files
+@import "content";//the order should follow the order of the web page. in this case, header is first, then content, then footer. above all else the variables and reset has to be before the header, content, and footer. 
+@import "footer"; 
+   

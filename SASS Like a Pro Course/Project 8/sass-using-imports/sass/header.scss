@@ -1,0 +1,14 @@
+$headerBG: orange; //BG stands for background
+$fontColor: white; 
+
+#header{
+    background: $headerBG;
+    color: $fontColor;
+    ul{
+        li{
+            display: inline-block;
+            padding: 20px;
+            margin: 20px; 
+        } 
+    }
+}
