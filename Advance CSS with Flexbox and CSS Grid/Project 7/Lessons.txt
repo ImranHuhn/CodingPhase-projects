@@ -1,0 +1,52 @@
+folder 2 
+vid 1
+-to start css grids you must display it in grid mode like this "display:grid;"
+-the amount of repeated "fr" is equal to the amount of columns
+-each number that is next to "fr" are the amount of columns within that one column
+-"fr" are like percentages
+vid2
+-for properties of "grid-auto-rows" use "minmax" to specify the width in px and auto to autimate the height(similar to inline-block, but for height). if you use the property "grid-template-row", this will give a strictly fixed height of the element. the order of the pixel numbers for this property corresponds to the row . so the first number is the height of the first row, the second number is the height of the second row etc.
+vid 3
+-to move an element or container, you must add the properties of "grid-column" and "grid-row" to the targeted element and specify which grid lines you want to place in between. 
+vid4
+-when using the property "justify-items" this will automate the width based on the content, but the size of the element is still the same. if the property is in "start" mode, this puts the content to the left of the element. in "end" mode, this puts content to the right side. in "center" mode, this puts content in the middle. "stretch" mode is the default mode.
+vid5
+-the property for "align-items" has the same concept as justify-items, but works vertically. this will automate the height based on the content that's in the element. in "start" mode, this puts the content to the top of the element. in "end" mode, this puts the content to the bottom of the element. in "center" mode, this puts the content in the middle. "stretch" mode is the default mode. 
+vid6
+-if youre using "px" instead of fr for the "grid-template-columns", you will have to use the property "justify-content". this property will move the total elements altogether horizontally. the modes are the same just like justify-items: if the property is in "start" mode, this puts everything to the left of the element. in "end" mode, this puts everything to the right side. in "center" mode, this puts everything in the middle. "stretch" mode is the default mode.
+vid7
+-"grid-column-gap" adds space inbetween all the elements from left to right(horizontally), in pixels
+-"grid-row-gap" adds space in between all the element from top to bottom(vertically), in pixels
+-"grid-gap" adds space all around each and every elements in pixels.
+
+folder3
+vid1
+-proj for creating a website layout using css grids
+-it's best to have an even number of columns. so if you have an odd number of columns, double it. for instance, if you have 3 columns, double it to 6 to have an even amount. 
+vid2
+-css grids proj with responsive design: bootstrap structure bc of the 12 columns
+
+folder4
+vid1
+-to start flexboxes you must display it in flex mode like this "display:flex;"
+-you can change the direction and/or order by using "flex-direction". in default it is in "row" mode. to reverse the order, put it in "row-reverse". to put it in a column, use "column" mode. to reverse the order as a columnd, use "column-reverse"
+vid2
+-when the width of the browser shrinks, flexboxes will shrink the width of all the elements to keep it in the same row. witht the property "flex-wrap" in "wrap" mode, the elements at the end(the elements all the way to the last right of the browser) will add a bottom row and move to that bottom row. in "wrap-reverse" mode, same thing will happen, but instead of adding a row to the bottom, it will add a row to the top which is where the elements from the right will go to.
+vid3
+-you can use the property "flex-flow" as a shorthand that combines flex-direction and flex-wrap. when chossing the mode of "flex-flow" the first entry is the either column, row, column-reverse, or row-reverse | and the second entry after a single space is wrap or wrap-reverse.
+vid4
+-for the properties in flexboxes "justify-content" and "align-items" are the same a cssgrid's. justify-content moves horizontally(left to right) | align-items moves vertically(top to bottom). both of these properties has the same modes which are "flex-start", "flex-end", "center", and "stretch". there are more modes that involves spacings, but these 4 modes are the .ost commonly used
+vid5
+-the most common flex properties used are justify-content and align-items. the property "align-content" is used for some situations, but not so much. so if it is being used this property is used to shift groups of elements instead individually. the modes are the same as justify-content and align-items.
+vid6
+-add the "order" property in the specific element to reorder the elements.
+vid7
+-the property "flex-grow" is added directly to the epecific element. this property is similar to "fr" in css grid
+-added directly to the epecific element, "flex-grow" is basically the percentage/ratio used to fill up the column or row, depending if it is in column mode or row mode.
+-it is encouraged to have the total amount of "flow-grow" to be even. or you can have a total of 12 which is bootstraps structure. similar to "fr" in cssgrid
+-added directly to the epecific element, "flex-shrink" is not commonly used, but it shrinks the column or row depending on the mode the element is in relative to the browser size. so if it is set to 1, it will shrink 1 times. if set to 2, it will shrink twice as small as originally. if 3, it will shrink 3 times as the orginial size. 
+-added directly to the epecific element, "flex-bases" is the minimum size of the column or row(depending on the flex mode if set to column or row)
+-most common practice is to always use the short hand which is the property "flex" which is added directly to the epecific element. in the first value of the "flex" property is flex-grow. the second value is flex-shrink, and the third value is the flex-bases which is in pixels
+vid8
+-added directly to the epecific element, "align-self" changes the targeted element without effecting the other elements. it has the same modes as the other flex properties. in "auto" mode however, follows the mode of align-item in the parent
+
