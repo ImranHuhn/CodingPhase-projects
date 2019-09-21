@@ -337,8 +337,8 @@ body {
 #sideMenu {
   background: #302D43;
   width: 280px;
-  height: 155%;
-  position: absolute;
+  height: 100%;
+  position: fixed;
 }
 
 #sideMenu .logo {
@@ -687,12 +687,6 @@ input:active {
 
 #content-area .bottom-table table {
   background-color: white;
-  -webkit-border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   width: 100%;
 }
 
