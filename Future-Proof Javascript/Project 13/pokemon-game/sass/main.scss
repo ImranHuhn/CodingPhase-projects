@@ -1,12 +1,16 @@
-@import './reset';
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+
+
+
 
 /*font-family: 'Bangers', cursive;*/
 /*font-family: 'Cabin Sketch', cursive;*/
 /*font-family: 'Freckle Face', cursive;*/
-/*font-family: 'Press Start 2P', cursive;*/
-*{
+/*font-family: 'Press Start 2P', cursive;*/ 
+*{ 
   box-sizing: border-box;
-} 
+}
 /* SELECT SCREEN ============================================================*/
 .header{
   background: #0a0618; /* Old browsers */
