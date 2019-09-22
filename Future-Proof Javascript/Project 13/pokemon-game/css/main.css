@@ -297,7 +297,7 @@ body {
 #battle-screen .battle-btns {
   text-align: center;
   vertical-align: top;
-  margin-top: 600px;
+  margin-top: 580px;
 }
 
 #battle-screen .battle-btns .rock {
@@ -379,7 +379,7 @@ body {
 #battle-screen .player {
   position: absolute;
   bottom: 10%;
-  left: 0;
+  left: 5%;
   padding-bottom: 40px;
 }
 
@@ -463,7 +463,7 @@ body {
 #battle-screen .cpu {
   position: absolute;
   bottom: 10%;
-  right: 0;
+  right: 5%;
   padding-bottom: 40px;
 }
 
