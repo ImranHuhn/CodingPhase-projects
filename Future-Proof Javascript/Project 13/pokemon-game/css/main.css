@@ -158,10 +158,10 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#0a0618), to(#261c53));
   background: linear-gradient(to bottom, #0a0618 0%, #261c53 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-bottom: 2px solid #4B37A3;
   position: fixed;
   color: white;
   font-size: 28px;
-  border-bottom: 2px solid #4B37A3;
   width: 100%;
   position: absolute;
   z-index: 100;

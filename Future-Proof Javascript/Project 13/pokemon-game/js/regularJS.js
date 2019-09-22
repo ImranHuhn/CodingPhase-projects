@@ -1,3 +1,93 @@
+// // Characters
+// // create data for all the characters, with their names, type, weaknesses, health, and attack moves(name, attack stat, maximum)
+
+//strongest to weakest Digimon: Millenniummon, Imperialdramon, Susanoomon, Apocalymon, Khaosmon
+//strongest to weakest Pokemon: Rayquaza, Arceus, Giratina, Palkia, Dialga
+
+var characters = [
+  {
+    name: 'Imperialdramon',
+    hp: 900,
+    attack: 80,
+    defense: 40,
+    level: '1,000,000,000',
+    img: './img/strongest_digimon/1Imperialdramon_Paladin_Mode.gif'
+  },
+  {
+    name: 'Apocalymon',
+    hp: 700,
+    attack: 40,
+    defense: 80,
+    level: '10,000,000',
+    img: './img/strongest_digimon/1Apocalymon.gif'
+  },
+  {
+    name: 'Susanoomon',
+    hp: 800,
+    attack: 60,
+    defense: 60,
+    level: '100,000,000',
+    img: './img/strongest_digimon/1SUSANOOMON.gif'
+  },
+  {
+    name: 'Khaosmon',
+    hp: 600,
+    attack: 20,
+    defense: 100,
+    level: '1,000,000',
+    img: './img/strongest_digimon/1UltimateKhaosmon.gif'
+  },
+  {
+    name: 'Millenniummon',
+    hp: 1000,
+    attack: 100,
+    defense: 20,
+    level: '10,000,000,000',
+    img: './img/strongest_digimon/1ZEEDMILLENNIUMMON.gif'
+  },
+  {
+    name: 'Arceus',
+    hp: 900,
+    attack: 80,
+    defense: 40,
+    level: '1,000,000,000',
+    img: './img/strongest_pokemon/1arceus.gif'
+  },
+  {
+    name: 'Dialga',
+    hp: 600,
+    attack: 20,
+    defense: 100,
+    level: '1,000,000',
+    img: './img/strongest_pokemon/1dialga.gif'
+  },
+  {
+    name: 'Giratina',
+    hp: 800,
+    attack: 60,
+    defense: 60,
+    level: '100,000,000',
+    img: './img/strongest_pokemon/1giratina-origin.gif'
+  },
+  {
+    name: 'Palkia',
+    hp: 700,
+    attack: 40,
+    defense: 80,
+    level: '10,000,000',
+    img: './img/strongest_pokemon/1palkia.gif'
+  },
+  {
+    name: 'Rayquaza',
+    hp: 1000,
+    attack: 100,
+    defense: 20,
+    level: '10,000,000,000',
+    img: './img/strongest_pokemon/1rayquaza-mega.gif'
+  },
+
+]
+
 var gameState = {
   userCharacter: '',
   rivalCharacter: ''
@@ -41,31 +131,13 @@ function computerPick() {
 
 
 
-// // pokemon
-// // create data for 3 different pokemons, with their names, type, weaknesses, health, and attack moves(name, attack stat, maximum)
-// var pokemons = [
-//   {
-//     name: 'charmander',
-//     type: 'fire',
-//     attack: 52,
-//     stamina: 39,
-//     level: 1
-//   },
-//   {
-//     name: 'charmander',
-//     type: 'fire',
-//     attack: 52,
-//     stamina: 39,
-//     level: 1
-//   },
 
-// ]
 
 
 // var attack = 20;
 // var level = 10;
 // var stack = 1.3;
-// var stamina = 39;
+// var defense = 39;
 
 // // create a formula for attacks
 // console.log((attack * level ) * stack / 7)
@@ -74,7 +146,7 @@ function computerPick() {
 
 // // create a formula for health
 // //HP = 0.20 x Sqrt(Pokemon_level) x (HP_base_stat)
-// console.log(((0.20 * Math.sqrt(level)) * stamina) * 15)
+// console.log(((0.20 * Math.sqrt(level)) * defense) * 15)
 
 
 
