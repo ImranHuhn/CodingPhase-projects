@@ -380,11 +380,11 @@ body {
   position: absolute;
   bottom: 10%;
   left: 5%;
-  padding-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 #battle-screen .player img {
-  height: 450px;
+  height: 400px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   -webkit-filter: FlipH;
@@ -464,7 +464,7 @@ body {
   position: absolute;
   bottom: 10%;
   right: 5%;
-  padding-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 #battle-screen .cpu .player2 {
@@ -534,6 +534,6 @@ body {
 }
 
 #battle-screen .cpu img {
-  height: 450px;
+  height: 400px;
 }
 /*# sourceMappingURL=main.css.map */

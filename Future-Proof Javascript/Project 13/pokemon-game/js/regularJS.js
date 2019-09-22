@@ -4,7 +4,8 @@
 //strongest to weakest Digimon: Millenniummon, Imperialdramon, Susanoomon, Apocalymon, Khaosmon
 //strongest to weakest Pokemon: Rayquaza, Arceus, Giratina, Palkia, Dialga
 
-var characters = [
+//Database section      ==================================================
+var characterDB = [
   {
     name: 'Imperialdramon',
     hp: 900,
@@ -85,39 +86,99 @@ var characters = [
     level: '10,000,000,000',
     img: './img/strongest_pokemon/1rayquaza-mega.gif'
   },
-
 ]
 
+
+//game state    ===================================================================
 var gameState = {
   userCharacter: '',
   rivalCharacter: ''
 }
 
+
+//elements section   =============================================================
 console.log(gameState);
 var charEl = document.querySelector('.select-screen').querySelectorAll('.character');
 console.log(charEl);
 var battleScreenEl = document.getElementById('battle-screen');
-var i = 0;
+var attackBtnsEl = document.getElementById('battle-screen').querySelectorAll('.attack');
+console.log(attackBtnsEl);
 
+
+//loop for character selection    =======================================================
+var i = 0;
 while (i < charEl.length) {
+  //function applied to each characters on the screen selection mode  ====================
   charEl[i].onclick = function () {
+    //names that are selected in select mode   =============================================
     var characterName = this.dataset.character;
+    //targeting the images in battle mode     =============================================
+    var player1Img = document.querySelector('.player1').getElementsByTagName('img');
+    var player2Img = document.querySelector('.player2').getElementsByTagName('img');
+
+    //store player1 character into game state database      ===================================
     gameState.userCharacter = characterName;
 
+    //computer randomly selects character  =====================================================
     computerPick()
+    //battle screen appears after player 1 selects character    ================================
     battleScreenEl.classList.toggle('active');
-    console.log(gameState);
+    
+    //accessing database from the selected player1 character    ==================================
+    var currentUserCharacter = characterDB.filter(function(character) {
+      return character.name == gameState.userCharacter;
+    });
+    player1Img[0].src = currentUserCharacter[0].img;
+
+
+    //accessing database from the selected computer character    ==================================
+    var currentRivalCharacter = characterDB.filter(function(character) {
+      return character.name == gameState.rivalCharacter;
+    });
+    player2Img[0].src = currentRivalCharacter[0].img;
+    
+    //player1 picks battle options
+
+    //computer character's hp goes down
+
+    //computer picks battle options
+
+    //player1 character's hp goes down
+
+    //rock > scissors
+    //paper > rock
+    //scissors > paper
+
+    //defense determines the effectiveness of the opponents attack on hp
+    //defense determines whether opponent misses or not
+
+    //player with health <= 0, loses
+
+
+    //testing section  ================================================================
+    // console.log(currentUserCharacter);
+    // console.log(player1Img[0]);
+    // console.log(gameState);
     // console.log('I pressed this character ' + characterName);
   };
   i++;
-}
+};
 
+var a = 0;
+while(a < attackBtnsEl.length) {
+  attackBtnsEl[a].onclick = function() {
+    var attackName = this.dataset.attack;
+    gameState.currentUserAttack = attackName
+    console.log(gameState.currentUserAttack);
+  };
+  a++;
+};
 
-function randomNumber(min, max) {
+var randomNumber = function (min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function computerPick() {
+var computerPick = function() {
   gameState.rivalCharacter = charEl[randomNumber(0, 10)].dataset.character;
 }
 
