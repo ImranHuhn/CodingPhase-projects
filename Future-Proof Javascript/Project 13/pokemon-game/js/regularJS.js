@@ -1,54 +1,35 @@
 var gameState = {
-  userChar: '',
-  rivalChar: ''
+  userCharacter: '',
+  rivalCharacter: ''
 }
-// console.log(gameState);
-var charEl = document.querySelector('.select-screen').querySelectorAll('.character'); 
-console.log('character element is ' + charEl);
 
+console.log(gameState);
+var charEl = document.querySelector('.select-screen').querySelectorAll('.character');
+console.log(charEl);
+var battleScreenEl = document.getElementById('battle-screen');
 var i = 0;
-while (i < charEl.length) {
-  charEl[i].onclick = function() {
-    var charName = this.dataset.userChar;
-    gameState.userChar = charName;
 
-    compPick()
-    // console.log(gameState);
-    console.log('I pressed this character ' + charName);
+while (i < charEl.length) {
+  charEl[i].onclick = function () {
+    var characterName = this.dataset.character;
+    gameState.userCharacter = characterName;
+
+    computerPick()
+    battleScreenEl.classList.toggle('active');
+    console.log(gameState);
+    // console.log('I pressed this character ' + characterName);
   };
   i++;
 }
 
 
-function randomNumber(min , max) {
+function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-
-function compPick() {
-  gameState.rivalChar = charEl[randomNumber(0 , 3)].dataset.char
+function computerPick() {
+  gameState.rivalCharacter = charEl[randomNumber(0, 10)].dataset.character;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -77,7 +58,7 @@ function compPick() {
 //     stamina: 39,
 //     level: 1
 //   },
-  
+
 // ]
 
 
@@ -105,4 +86,3 @@ function compPick() {
 
 
 // // when one user loses all his health declare a winner
-

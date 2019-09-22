@@ -1,4 +1,11 @@
-javascript:
+
+JavaScript:
+
 "data attributes"
-"dataset"
-"this"
+"this.dataset.<name of dataset attribute>"
+"this.<element>"
+"<element>.classList"
+"document.addEventListener()"
+"document.querySelector()"
+"document.querySelectorAll()"
+"document.getElementById()"

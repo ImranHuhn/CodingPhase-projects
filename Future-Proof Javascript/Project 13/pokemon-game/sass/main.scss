@@ -42,6 +42,7 @@ body {
   font-size: 32px;
   padding: 15px;
   text-align: center;
+  margin-top: 30px;
 }
 
 .header .subtitle {
@@ -57,26 +58,21 @@ body {
   font-size: 14px;
   padding: 15px;
 }
+
 //////////////////////////////////////
 .select-screen {
   position: relative;
 }
 
 .select-screen .main {
-  background: #76590b;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #76590b 0%, #cf9c11 10%, #ecb414 23%, #fafa74 35%, #fafafa 50%, #fafa74 65%, #ecb414 77%, #cf9c11 90%, #76590b 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #76590b 0%, #cf9c11 10%, #ecb414 23%, #fafa74 35%, #fafafa 50%, #fafa74 65%, #ecb414 77%, #cf9c11 90%, #76590b 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #76590b 0%, #cf9c11 10%, #ecb414 23%, #fafa74 35%, #fafafa 50%, #fafa74 65%, #ecb414 77%, #cf9c11 90%, #76590b 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: url("../img/Outer-Space-Stars-Galaxies-Frozen-Wallpaper-1920x1200.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   width: 100%;
   padding: 100px 50px;
   overflow: auto;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   height: 100vh;
 }
 
@@ -84,21 +80,21 @@ body {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .select-screen .main .poke-row {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .select-screen .main .title {
   position: absolute;
   top: 0;
   width: 100%;
-  background: black;
+  background: rgba(black, .7);
   color: white;
   font-family: 'Press Start 2P', cursive;
   padding: 10px;
@@ -106,7 +102,6 @@ body {
   box-sizing: border-box;
   font-size: .8rem;
   height: 50px;
-
 }
 
 .select-screen .main .character {
@@ -116,19 +111,23 @@ body {
   align-items: flex-end;
   justify-content: center;
   position: relative;
-  border: 3px solid #000;
+  border: 1px solid #000000;
   float: left;
   margin: 0 25px;
+  cursor: pointer;
+  background: rgba(#64B2FA, .5);
+  transition: all .5s ease-in-out
 }
 
 
-.select-screen .main .character {
-  background: #64B2FA;
+.select-screen .main .character:hover {
+  border: 1px solid #007bff;
+  background: #007bff;
 }
 
 /* BATTLE SCREEN ============================================================*/
 #battle-screen {
-  background: url(//i.imgur.com/UZKEjzG.png) no-repeat center center;
+  background: url(../img/apollo_11_earth_from_moon-2_0.jpg) no-repeat center center;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -138,7 +137,15 @@ body {
   overflow: auto;
   height: 100vh;
   position: relative;
-  top: -100vh
+  // top: -100vh;
+  z-index: 150;
+  top: 0;
+  transition: all .8s ease-in-out;
+
+}
+
+#battle-screen.active {
+  top: -100vh;
 }
 
 #battle-screen .fight-btn {
@@ -146,11 +153,15 @@ body {
   text-transform: capitalize;
   font-size: 200px;
   text-align: center;
+  color: white;
+  margin-top: -50px;
+
 }
 
 #battle-screen .battle-btns {
   text-align: center;
   vertical-align: top;
+  margin-top: 40px;
 }
 
 
@@ -234,11 +245,11 @@ body {
 #battle-screen .player {
   position: absolute;
   bottom: 10%;
-  left: 20%;
+  left: 0;
 }
 
 #battle-screen .player img {
-  height: 200px;
+  height: 500px;
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -256,8 +267,8 @@ body {
   position: absolute;
   background: #F8F8D8;
   top: -140px;
-  left: -70px;
-  height: 100px;
+  left: 10px;
+  height: 120px;
   width: 300px;
   border-radius: 5px;
   border: 5px solid #506858;
@@ -272,7 +283,7 @@ body {
 #battle-screen .player .player1 .stats .level {
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
-  float: right;
+  // float: right;
 }
 
 #battle-screen .player .player1 .stats .health {
@@ -288,7 +299,6 @@ body {
 
 #battle-screen .player .player1 .stats .health .title {
   width: 25%;
-  display: inline-block;
   float: left;
 }
 
@@ -296,7 +306,6 @@ body {
   background: #10120C;
   border-radius: 5px;
   width: 75%;
-  display: inline-block;
   height: 16px;
   float: left;
 }
@@ -304,8 +313,6 @@ body {
 #battle-screen .player .player1 .stats .health .health-bar .inside {
   background: #70F8A8;
   border-radius: 5px;
-
-  display: inline-block;
   height: 16px;
   float: left;
   transition: all .5s ease-in-out;
@@ -321,7 +328,7 @@ body {
 #battle-screen .cpu {
   position: absolute;
   bottom: 10%;
-  right: 20%;
+  right: 0;
 }
 
 #battle-screen .cpu .player2 {
@@ -332,8 +339,8 @@ body {
   position: absolute;
   background: #F8F8D8;
   top: -140px;
-  left: -70px;
-  height: 100px;
+  right: 10px;
+  height: 120px;
   width: 300px;
   border-radius: 5px;
   border: 5px solid #506858;
@@ -348,7 +355,7 @@ body {
 #battle-screen .cpu .player2 .stats .level {
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
-  float: right;
+  // float: right;
 }
 
 #battle-screen .cpu .player2 .stats .health {
@@ -372,7 +379,6 @@ body {
   background: #10120C;
   border-radius: 5px;
   width: 75%;
-  display: inline-block;
   height: 16px;
   float: left;
 }
@@ -380,8 +386,6 @@ body {
 #battle-screen .cpu .player2 .stats .health .health-bar .inside {
   background: #70F8A8;
   border-radius: 5px;
-
-  display: inline-block;
   height: 16px;
   float: left;
   transition: all .5s ease-in-out;
@@ -392,9 +396,6 @@ body {
   font-size: 16px;
 }
 
-
-
-
 #battle-screen .cpu img {
-  height: 200px;
+  height: 500px;
 }
