@@ -5,95 +5,94 @@
 //strongest to weakest Pokemon: Rayquaza, Arceus, Giratina, Palkia, Dialga
 
 //Database section      ==================================================
-var characterDB = [
-  {
+var characterDB = [{
     name: 'Imperialdramon',
-    hp: 900,
-    attack: 80,
-    defense: 40,
-    level: '1,000,000,000',
+    hp: 400,
+    attack: 8,
+    defense: 4,
+    level: 4,
     img: './img/strongest_digimon/1Imperialdramon_Paladin_Mode.gif'
   },
   {
     name: 'Apocalymon',
-    hp: 700,
-    attack: 40,
-    defense: 80,
-    level: '10,000,000',
+    hp: 200,
+    attack: 4,
+    defense: 8,
+    level: 2,
     img: './img/strongest_digimon/1Apocalymon.gif'
   },
   {
     name: 'Susanoomon',
-    hp: 800,
-    attack: 60,
-    defense: 60,
-    level: '100,000,000',
+    hp: 300,
+    attack: 6,
+    defense: 6,
+    level: 3,
     img: './img/strongest_digimon/1SUSANOOMON.gif'
   },
   {
     name: 'Khaosmon',
-    hp: 600,
-    attack: 20,
-    defense: 100,
-    level: '1,000,000',
+    hp: 100,
+    attack: 2,
+    defense: 10,
+    level: 1,
     img: './img/strongest_digimon/1UltimateKhaosmon.gif'
   },
   {
     name: 'Millenniummon',
-    hp: 1000,
-    attack: 100,
-    defense: 20,
-    level: '10,000,000,000',
+    hp: 500,
+    attack: 10,
+    defense: 2,
+    level: 5,
     img: './img/strongest_digimon/1ZEEDMILLENNIUMMON.gif'
   },
   {
     name: 'Arceus',
-    hp: 900,
-    attack: 80,
-    defense: 40,
-    level: '1,000,000,000',
+    hp: 400,
+    attack: 8,
+    defense: 4,
+    level: 4,
     img: './img/strongest_pokemon/1arceus.gif'
   },
   {
     name: 'Dialga',
-    hp: 600,
-    attack: 20,
-    defense: 100,
-    level: '1,000,000',
+    hp: 100,
+    attack: 2,
+    defense: 10,
+    level: 1,
     img: './img/strongest_pokemon/1dialga.gif'
   },
   {
     name: 'Giratina',
-    hp: 800,
-    attack: 60,
-    defense: 60,
-    level: '100,000,000',
+    hp: 300,
+    attack: 6,
+    defense: 6,
+    level: 3,
     img: './img/strongest_pokemon/1giratina-origin.gif'
   },
   {
     name: 'Palkia',
-    hp: 700,
-    attack: 40,
-    defense: 80,
-    level: '10,000,000',
+    hp: 200,
+    attack: 4,
+    defense: 8,
+    level: 2,
     img: './img/strongest_pokemon/1palkia.gif'
   },
   {
     name: 'Rayquaza',
-    hp: 1000,
-    attack: 100,
-    defense: 20,
-    level: '10,000,000,000',
+    hp: 500,
+    attack: 10,
+    defense: 2,
+    level: 5,
     img: './img/strongest_pokemon/1rayquaza-mega.gif'
   },
-]
+];
 
 
 //game state    ===================================================================
 var gameState = {
   userCharacter: '',
   rivalCharacter: ''
-}
+};
 
 
 //elements section   =============================================================
@@ -120,23 +119,28 @@ while (i < charEl.length) {
     gameState.userCharacter = characterName;
 
     //computer randomly selects character  =====================================================
-    computerPick()
+    computerPick();
     //battle screen appears after player 1 selects character    ================================
     battleScreenEl.classList.toggle('active');
-    
+
     //accessing database from the selected player1 character    ==================================
-    var currentUserCharacter = characterDB.filter(function(character) {
+    gameState.currentUserCharacter = characterDB.filter(function (character) {
       return character.name == gameState.userCharacter;
     });
-    player1Img[0].src = currentUserCharacter[0].img;
+    player1Img[0].src = gameState.currentUserCharacter[0].img;
 
 
     //accessing database from the selected computer character    ==================================
-    var currentRivalCharacter = characterDB.filter(function(character) {
+    gameState.currentRivalCharacter = characterDB.filter(function (character) {
       return character.name == gameState.rivalCharacter;
     });
-    player2Img[0].src = currentRivalCharacter[0].img;
-    
+    player2Img[0].src = gameState.currentRivalCharacter[0].img;
+
+    gameState.currentUserCharacter[0].health = calcInitHealth(gameState.currentUserCharacter);
+    gameState.currentRivalCharacter[0].health = calcInitHealth(gameState.currentRivalCharacter);
+
+    console.log(gameState);
+
     //player1 picks battle options
 
     //computer character's hp goes down
@@ -165,52 +169,167 @@ while (i < charEl.length) {
 };
 
 var a = 0;
-while(a < attackBtnsEl.length) {
-  attackBtnsEl[a].onclick = function() {
+while (a < attackBtnsEl.length) {
+  attackBtnsEl[a].onclick = function () {
     var attackName = this.dataset.attack;
-    gameState.currentUserAttack = attackName
+    gameState.currentUserAttack = attackName;
 
-    play(attackName, computerAttack())
+    play(attackName, computerAttack());
   };
   a++;
 };
 
-var computerAttack = function() {
-  var attacks = ['rock' , 'paper' , 'scissors'];
+var computerAttack = function () {
+  var attacks = ['rock', 'paper', 'scissors'];
 
-  return attacks[randomNumber(0 , 3)]
+  return attacks[randomNumber(0, 3)];
 };
 
-var play = function(userAttack,computerAttack) {
-  switch(userAttack) {
+var calcInitHealth = function (user) {
+  return ((0.20 * Math.sqrt(user[0].level)) * user[0].defense) * user[0].hp;
+};
+
+var attackMove = function (attack, level, stack, critical, enemy, attacker) {
+  console.log(enemy.name + ' before: ' + enemy.health);
+  var attackAmount = ((attack * level) * (stack + critical));
+  enemy.health = enemy.health - attackAmount;
+  checkWinner(enemy, attacker);
+  console.log('attack = ' + attackAmount);
+  console.log(enemy.name + ' after: ' + enemy.health);
+};
+
+var checkWinner = function (enemy, attacker) {
+  if(enemy.health <= 0) {
+    console.log('Congratulations! You are the WINNER!! ' + attacker.name);
+  };
+};
+
+var play = function (userAttack, computerAttack) {
+  var currentUserCharacter = gameState.currentUserCharacter[0];
+  var currentRivalCharacter = gameState.currentRivalCharacter[0];
+  switch (userAttack) {
     case 'rock':
-      if(computerAttack == 'paper') {
-        console.log('You lose. Paper beats Rock');
+      console.log('I picked: ' + userAttack);
+      console.log('Computer picked: ' + computerAttack);
+      if (computerAttack == 'paper') {
+        if (currentUserCharacter.health >= 1 && currentRivalCharacter.health >= 1) {
+          //user
+          attackMove(currentUserCharacter.attack, currentUserCharacter.level, .8, .5, currentRivalCharacter, currentUserCharacter);
+          if (currentRivalCharacter.health >= 1) {
+            //computer
+            attackMove(currentRivalCharacter.attack, currentRivalCharacter.level, .8, 2, currentUserCharacter, currentRivalCharacter);
+            console.log('Paper beats Rock You lose.');
+          };
+        };
+        
       };
-      if(computerAttack == 'scissors') {
-        console.log('You win! Rock beats Scissors');
+      if (computerAttack == 'scissors') {
+        if (currentUserCharacter.health >= 1 && currentRivalCharacter.health >= 1) {
+          //user
+          attackMove(currentUserCharacter.attack, currentUserCharacter.level, .8, 2, currentRivalCharacter, currentUserCharacter);
+          if (currentRivalCharacter.health >= 1) {
+            //computer
+            attackMove(currentRivalCharacter.attack, currentRivalCharacter.level, .8, .5, currentUserCharacter, currentRivalCharacter);
+            console.log('Rock beats Scissors You win!');
+          };
+        };
       };
-      if(computerAttack == 'rock') {
-        console.log('Draw');
+      if (computerAttack == 'rock') {
+        if (currentUserCharacter.health >= 1 && currentRivalCharacter.health >= 1) {
+          //user
+          attackMove(currentUserCharacter.attack, currentUserCharacter.level, .8, 1, currentRivalCharacter, currentUserCharacter);
+          if (currentRivalCharacter.health >= 1) {
+            //computer
+            attackMove(currentRivalCharacter.attack, currentRivalCharacter.level, .8, 1, currentUserCharacter, currentRivalCharacter);
+            console.log('Both of you lose.');
+          };
+        };
       };
-      console.log(userAttack);
       break;
     case 'paper':
-      console.log(userAttack)
+      console.log('I picked: ' + userAttack);
+      console.log('Computer picked: ' + computerAttack);
+      if (computerAttack == 'scissors') {
+        if (currentUserCharacter.health >= 1 && currentRivalCharacter.health >= 1) {
+          //user
+          attackMove(currentUserCharacter.attack, currentUserCharacter.level, .8, .5, currentRivalCharacter, currentUserCharacter);
+          if (currentRivalCharacter.health >= 1) {
+            //computer
+            attackMove(currentRivalCharacter.attack, currentRivalCharacter.level, .8, 2, currentUserCharacter, currentRivalCharacter);
+            console.log('Scissors beats Paper You lose.');
+          };
+        };
+      };
+      if (computerAttack == 'rock') {
+        if (currentUserCharacter.health >= 1 && currentRivalCharacter.health >= 1) {
+          //user
+          attackMove(currentUserCharacter.attack, currentUserCharacter.level, .8, 2, currentRivalCharacter, currentUserCharacter);
+          if (currentRivalCharacter.health >= 1) {
+            //computer
+            attackMove(currentRivalCharacter.attack, currentRivalCharacter.level, .8, .5, currentUserCharacter, currentRivalCharacter);
+            console.log('Paper beats Rock You win!');
+          };
+        };
+      };
+      if (computerAttack == 'paper') {
+        if (currentUserCharacter.health >= 1 && currentRivalCharacter.health >= 1) {
+          //user
+          attackMove(currentUserCharacter.attack, currentUserCharacter.level, .8, 1, currentRivalCharacter, currentUserCharacter);
+          if (currentRivalCharacter.health >= 1) {
+            //computer
+            attackMove(currentRivalCharacter.attack, currentRivalCharacter.level, .8, 1, currentUserCharacter, currentRivalCharacter);
+            console.log('Both of you lose.');
+          };
+        };
+      };
       break;
     case 'scissors':
-      console.log(userAttack)
+      console.log('I picked: ' + userAttack);
+      console.log('Computer picked: ' + computerAttack);
+      if (computerAttack == 'rock') {
+        if (currentUserCharacter.health >= 1 && currentRivalCharacter.health >= 1) {
+          //user
+          attackMove(currentUserCharacter.attack, currentUserCharacter.level, .8, .5, currentRivalCharacter, currentUserCharacter);
+          if (currentRivalCharacter.health >= 1) {
+            //computer
+            attackMove(currentRivalCharacter.attack, currentRivalCharacter.level, .8, 2, currentUserCharacter, currentRivalCharacter);
+            console.log('Rock beats Scissors. You lose.');
+          };
+        };
+      };
+      if (computerAttack == 'paper') {
+        if (currentUserCharacter.health >= 1 && currentRivalCharacter.health >= 1) {
+          //user
+          attackMove(currentUserCharacter.attack, currentUserCharacter.level, .8, 2, currentRivalCharacter, currentUserCharacter);
+          if (currentRivalCharacter.health >= 1) {
+            //computer
+            attackMove(currentRivalCharacter.attack, currentRivalCharacter.level, .8, .5, currentUserCharacter, currentRivalCharacter);
+            console.log('Scissors beats Paper. You win!');
+          };
+        };
+      };
+      if (computerAttack == 'scissors') {
+        if (currentUserCharacter.health >= 1 && currentRivalCharacter.health >= 1) {
+          //user
+          attackMove(currentUserCharacter.attack, currentUserCharacter.level, .8, 1, currentRivalCharacter, currentUserCharacter);
+          if (currentRivalCharacter.health >= 1) {
+            //computer
+            attackMove(currentRivalCharacter.attack, currentRivalCharacter.level, .8, 1, currentUserCharacter, currentRivalCharacter);
+            console.log('Both of you lose.');
+          };
+        };
+      };
       break;
-  }
+  };
 };
 
 var randomNumber = function (min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
-}
+};
 
-var computerPick = function() {
+var computerPick = function () {
   gameState.rivalCharacter = charEl[randomNumber(0, 10)].dataset.character;
-}
+};
 
 
 

@@ -1,6 +1,16 @@
 
 JavaScript:
 
+function expression:
+var <name> = function() {
+    <code block>;
+};
+
+function declaration: 
+function <name>() {
+    <code block>;
+};
+
 "data attributes"
 "this.dataset.<name of dataset attribute>"
 "this.<element>"
