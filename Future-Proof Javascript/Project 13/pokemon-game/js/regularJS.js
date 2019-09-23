@@ -169,9 +169,39 @@ while(a < attackBtnsEl.length) {
   attackBtnsEl[a].onclick = function() {
     var attackName = this.dataset.attack;
     gameState.currentUserAttack = attackName
-    console.log(gameState.currentUserAttack);
+
+    play(attackName, computerAttack())
   };
   a++;
+};
+
+var computerAttack = function() {
+  var attacks = ['rock' , 'paper' , 'scissors'];
+
+  return attacks[randomNumber(0 , 3)]
+};
+
+var play = function(userAttack,computerAttack) {
+  switch(userAttack) {
+    case 'rock':
+      if(computerAttack == 'paper') {
+        console.log('You lose. Paper beats Rock');
+      };
+      if(computerAttack == 'scissors') {
+        console.log('You win! Rock beats Scissors');
+      };
+      if(computerAttack == 'rock') {
+        console.log('Draw');
+      };
+      console.log(userAttack);
+      break;
+    case 'paper':
+      console.log(userAttack)
+      break;
+    case 'scissors':
+      console.log(userAttack)
+      break;
+  }
 };
 
 var randomNumber = function (min, max) {
