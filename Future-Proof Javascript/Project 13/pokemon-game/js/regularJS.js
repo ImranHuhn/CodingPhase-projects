@@ -124,16 +124,24 @@ var gameState = {
         gameState.currentUserCharacter = gameState.characterDB.filter(function (character) {
           return character.name == gameState.userCharacter;
         });
-        player1Img[0].src = gameState.currentUserCharacter[0].img;
 
+        player1Img[0].src = gameState.currentUserCharacter[0].img;
 
         //accessing database from the selected computer character    ==================================
         gameState.currentRivalCharacter = gameState.characterDB.filter(function (character) {
           return character.name == gameState.rivalCharacter;
         });
+
         player2Img[0].src = gameState.currentRivalCharacter[0].img;
+
         gameState.currentUserCharacter[0].health = gameState.calcInitHealth(gameState.currentUserCharacter);
+
+        gameState.currentUserCharacter[0].originalHealth = gameState.calcInitHealth(gameState.currentUserCharacter);
+
         gameState.currentRivalCharacter[0].health = gameState.calcInitHealth(gameState.currentRivalCharacter);
+        console.log(gameState);
+
+        gameState.currentRivalCharacter[0].originalHealth = gameState.calcInitHealth(gameState.currentRivalCharacter);
         console.log(gameState);
       };
       i++;
@@ -163,6 +171,20 @@ var gameState = {
     console.log(enemy.name + ' before: ' + enemy.health);
     var attackAmount = ((attack * level) * (stack + critical));
     enemy.health = enemy.health - attackAmount;
+
+    var userHP = document.querySelector('.player1').querySelector('.stats').querySelector('.health').querySelector('.health-bar').querySelector('.inside');
+
+    var compHP = document.querySelector('.player2').querySelector('.stats').querySelector('.health').querySelector('.health-bar').querySelector('.inside');
+
+    if (enemy.owner == 'user') {
+      var minusPercent = ((enemy.health) * 100 / enemy.originalHealth);
+      console.log(userHP)
+      userHP.style.width = ((minusPercent < 0) ? 0 : minusPercent) + '%';
+    } else {
+      var minusPercent = ((enemy.health) * 100 / enemy.originalHealth);
+      console.log(userHP)
+      compHP.style.width = ((minusPercent < 0) ? 0 : minusPercent) + '%';
+    } 
     gameState.checkWinner(enemy, attacker);
     console.log('attack = ' + attackAmount);
     console.log(enemy.name + ' after: ' + enemy.health);
@@ -179,12 +201,18 @@ var gameState = {
   },
 
   computerPick: function () {
-    gameState.rivalCharacter = gameState.elements.charEl[gameState.randomNumber(0, 10)].dataset.character;
+    do {
+      gameState.rivalCharacter = gameState.elements.charEl[gameState.randomNumber(0, 10)].dataset.character;
+      console.log('looping ' + gameState.rivalCharacter)
+    }
+    while (gameState.userCharacter == gameState.rivalCharacter) 
   },
 
   play: function (userAttack, computerAttack) {
     var currentUserCharacter = gameState.currentUserCharacter[0];
     var currentRivalCharacter = gameState.currentRivalCharacter[0];
+    currentUserCharacter.owner = 'user';
+    currentRivalCharacter.owner = 'computer';
     switch (userAttack) {
       case 'rock':
         console.log('I picked: ' + userAttack);
