@@ -140,7 +140,7 @@ table {
 /*font-family: 'Press Start 2P', cursive;*/
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -295,8 +295,12 @@ body {
 }
 
 #battle-screen .btn-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #battle-screen .btn-section .battle-btns {
@@ -544,13 +548,11 @@ body {
 #battle-screen .cpu img {
   height: 400px;
 }
-/*# sourceMappingURL=main.css.map */
-
-#battle-screen .end-game {
+#battle-screen #end-game {
   display: none;
 }
 
-#battle-screen .end-game .ending {
+#battle-screen #end-game .ending {
   position: absolute;
   /* Old browsers */
   /* FF3.6-15 */
@@ -567,12 +569,19 @@ body {
   bottom: 50px;
   left: 50px;
   right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 200;
 }
 
-#battle-screen .end-game .ending h1 {
+#battle-screen #end-game .ending h1 {
   color: white;
   font-family: 'Bangers', cursive;
   font-size: 15em;
@@ -581,21 +590,27 @@ body {
   letter-spacing: 7px;
 }
 
-#battle-screen .end-game .ending .win {
+#battle-screen #end-game .ending .win {
   display: none;
 }
 
-#battle-screen .end-game .ending .lose {
+#battle-screen #end-game .ending .lose {
   display: none;
 }
 
-#battle-screen .end-game .end-btn {
+#battle-screen #end-game .end-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#battle-screen .end-game .end-btn button {
+#battle-screen #end-game .end-btn button {
   position: absolute;
   z-index: 200;
   bottom: 15%;
@@ -606,11 +621,13 @@ body {
   border: solid 3px #506858;
   padding: 5px 20px 5px 20px;
   color: #506858;
+  -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
-#battle-screen .end-game .end-btn button:hover {
+#battle-screen #end-game .end-btn button:hover {
   border: solid 3px #007bff;
   color: #007bff;
   font-size: 3rem;
 }
+/*# sourceMappingURL=main.css.map */
