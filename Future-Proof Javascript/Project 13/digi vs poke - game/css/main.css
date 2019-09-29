@@ -208,8 +208,8 @@ body {
   display: flex;
   width: 100%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 200px;
 }
 
@@ -219,8 +219,8 @@ body {
   display: flex;
   width: 100%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 50px;
 }
 
@@ -234,7 +234,7 @@ body {
   padding: 10px;
   text-align: center;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: .8rem;
   height: 50px;
 }
@@ -246,11 +246,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
   border: 1px solid #000000;
   float: left;
@@ -294,13 +294,21 @@ body {
   margin-top: -100px;
 }
 
-#battle-screen .battle-btns {
+#battle-screen .btn-section {
+  display: flex;
+  justify-content: center;
+}
+
+#battle-screen .btn-section .battle-btns {
   text-align: center;
   vertical-align: top;
   margin-top: 580px;
+  position: absolute;
+  z-index: 150;
+  bottom: 5%;
 }
 
-#battle-screen .battle-btns .rock {
+#battle-screen .btn-section .battle-btns .rock {
   font-family: 'Press Start 2P', cursive;
   background: #AD6101;
   font-size: 10px;
@@ -319,13 +327,13 @@ body {
   cursor: pointer;
 }
 
-#battle-screen .battle-btns .rock img {
+#battle-screen .btn-section .battle-btns .rock img {
   width: 75px;
   height: 56px;
   margin-bottom: 5px;
 }
 
-#battle-screen .battle-btns .paper {
+#battle-screen .btn-section .battle-btns .paper {
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
   background: #AD6101;
@@ -344,13 +352,13 @@ body {
   cursor: pointer;
 }
 
-#battle-screen .battle-btns .paper img {
+#battle-screen .btn-section .battle-btns .paper img {
   width: 75px;
   height: 56px;
   margin-bottom: 5px;
 }
 
-#battle-screen .battle-btns .scissors {
+#battle-screen .btn-section .battle-btns .scissors {
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
   background: #AD6101;
@@ -369,7 +377,7 @@ body {
   cursor: pointer;
 }
 
-#battle-screen .battle-btns .scissors img {
+#battle-screen .btn-section .battle-btns .scissors img {
   width: 75px;
   height: 56px;
   margin-bottom: 5px;
@@ -388,7 +396,7 @@ body {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   -webkit-filter: FlipH;
-          filter: FlipH;
+  filter: FlipH;
   -ms-filter: "FlipH";
 }
 
@@ -537,3 +545,72 @@ body {
   height: 400px;
 }
 /*# sourceMappingURL=main.css.map */
+
+#battle-screen .end-game {
+  display: none;
+}
+
+#battle-screen .end-game .ending {
+  position: absolute;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#0a0618), to(#261c53));
+  background: linear-gradient(to bottom, #0a0618 0%, #261c53 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border: 2px solid #4B37A3;
+  /* height: 35%;
+  width: 80%; */
+  border-radius: 5px;
+  /* border: 5px solid #506858; */
+  top: 50px;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#battle-screen .end-game .ending h1 {
+  color: white;
+  font-family: 'Bangers', cursive;
+  font-size: 15em;
+  text-shadow: 0px 0px 25px #FFFFFF;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+#battle-screen .end-game .ending .win {
+  display: none;
+}
+
+#battle-screen .end-game .ending .lose {
+  display: none;
+}
+
+#battle-screen .end-game .end-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#battle-screen .end-game .end-btn button {
+  position: absolute;
+  z-index: 200;
+  bottom: 15%;
+  cursor: pointer;
+  font-family: 'Bangers', cursive;
+  font-size: 2.5rem;
+  border-radius: 5px;
+  border: solid 3px #506858;
+  padding: 5px 20px 5px 20px;
+  color: #506858;
+  transition: all .3s ease-in-out;
+}
+
+#battle-screen .end-game .end-btn button:hover {
+  border: solid 3px #007bff;
+  color: #007bff;
+  font-size: 3rem;
+}
