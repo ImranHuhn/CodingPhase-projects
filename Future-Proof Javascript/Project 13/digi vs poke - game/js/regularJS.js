@@ -15,6 +15,7 @@ var gameState = {
       attack: 8,
       defense: 4,
       level: 4,
+      levelDisplay: '100,000,000',
       img: './img/strongest_digimon/1Imperialdramon_Paladin_Mode.gif'
     },
     {
@@ -23,6 +24,7 @@ var gameState = {
       attack: 4,
       defense: 8,
       level: 2,
+      levelDisplay: '100,000',
       img: './img/strongest_digimon/1Apocalymon.gif'
     },
     {
@@ -31,6 +33,7 @@ var gameState = {
       attack: 6,
       defense: 6,
       level: 3,
+      levelDisplay: '1,000,000',
       img: './img/strongest_digimon/1SUSANOOMON.gif'
     },
     {
@@ -39,6 +42,7 @@ var gameState = {
       attack: 2,
       defense: 10,
       level: 1,
+      levelDisplay: '10,000',
       img: './img/strongest_digimon/1UltimateKhaosmon.gif'
     },
     {
@@ -47,6 +51,7 @@ var gameState = {
       attack: 10,
       defense: 2,
       level: 5,
+      levelDisplay: '100,000,000,000',
       img: './img/strongest_digimon/1ZEEDMILLENNIUMMON.gif'
     },
     {
@@ -55,6 +60,7 @@ var gameState = {
       attack: 8,
       defense: 4,
       level: 4,
+      levelDisplay: '100,000,000',
       img: './img/strongest_pokemon/1arceus.gif'
     },
     {
@@ -63,6 +69,7 @@ var gameState = {
       attack: 2,
       defense: 10,
       level: 1,
+      levelDisplay: '10,000',
       img: './img/strongest_pokemon/1dialga.gif'
     },
     {
@@ -71,6 +78,7 @@ var gameState = {
       attack: 6,
       defense: 6,
       level: 3,
+      levelDisplay: '1,000,000',
       img: './img/strongest_pokemon/1giratina-origin.gif'
     },
     {
@@ -79,6 +87,7 @@ var gameState = {
       attack: 4,
       defense: 8,
       level: 2,
+      levelDisplay: '100,000',
       img: './img/strongest_pokemon/1palkia.gif'
     },
     {
@@ -87,6 +96,7 @@ var gameState = {
       attack: 10,
       defense: 2,
       level: 5,
+      levelDisplay: '100,000,000,000',
       img: './img/strongest_pokemon/1rayquaza-mega.gif'
     },
   ],
@@ -119,7 +129,7 @@ var gameState = {
         gameState.computerPick();
         //battle screen appears after player 1 selects character    ================================
         gameState.elements.battleScreenEl.classList.toggle('active');
-
+  
         //accessing database from the selected player1 character    ==================================
         gameState.currentUserCharacter = gameState.characterDB.filter(function (character) {
           return character.name == gameState.userCharacter;
@@ -133,6 +143,14 @@ var gameState = {
         });
 
         player2Img[0].src = gameState.currentRivalCharacter[0].img;
+
+        //name and level changes after selection is made===============================
+        document.getElementById('name1').innerHTML = gameState.currentUserCharacter[0].name;
+        document.getElementById('name2').innerHTML = gameState.currentRivalCharacter[0].name;
+        document.getElementById('level1').innerHTML = gameState.currentUserCharacter[0].levelDisplay;
+        document.getElementById('level2').innerHTML = gameState.currentRivalCharacter[0].levelDisplay;
+        // console.log(gameState.currentUserCharacter)
+        // console.log(gameState.currentRivalCharacter)
 
         gameState.currentUserCharacter[0].health = gameState.calcInitHealth(gameState.currentUserCharacter);
 
