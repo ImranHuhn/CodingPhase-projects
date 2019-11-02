@@ -1,0 +1,1 @@
+- after completing the html/css and get request for the pokemon api, I couldn't search for pokemons by clicking enter on the keyboard. Instead, I had to click the "Search" button from the webpage to get info about a pokemon. 
