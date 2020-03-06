@@ -6,7 +6,7 @@
 -don't use css reset for html/reset. you want the use the default settings
 -when adding css into the element tags, "style" should be the last attribute as common practice. 
 -all quotes("") that is with in quotes("") must be single quotes('')
--after finishing each row, be sure to add more commits of the where the section starts and ends
+-after finishing each row, be sure to add more comments of the where the section starts and ends
 -make sure you know the difference between an html attribute and a css property. it's easy to confuse the two since everything is within the same html tags.
 -the tables make the columns
 -<tr> and <td> most often come hand in hand. specifically <td> is most often nested in <tr> to create a row. 
